@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../components/Layout/Main";
 import Home from "../components/Pages/Home/Home/Home";
+import LoginLayOut from "../components/LoginLayout/LoginLayOut";
+import Registration from "../components/LoginLayout/Registration";
 
  
 
@@ -12,6 +14,13 @@ import Home from "../components/Pages/Home/Home/Home";
             {
                 path:'/',
                 element: <Home></Home>
+            },
+            {   path: '/login',
+                element: <LoginLayOut></LoginLayOut>
+            },
+            {
+                path: '/register',
+                element: <Registration></Registration>
             }
         ]
     }
