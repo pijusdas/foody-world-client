@@ -3,7 +3,7 @@ import { Form } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 
 const LoginLayOut = () => {
-    const { loginWithGoogle, loginWithGithub } = useContext(AuthContext)
+    const { loginWithGoogle, loginWithGithub,login } = useContext(AuthContext)
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -11,6 +11,15 @@ const LoginLayOut = () => {
         const email = form.email.value;
         const password = form.password.value
         console.log(email, password)
+
+        login(email,password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
     }
 
     // handle google login
