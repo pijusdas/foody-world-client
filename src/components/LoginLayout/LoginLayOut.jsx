@@ -49,8 +49,8 @@ const LoginLayOut = () => {
 
     return (
         <div data-theme='aqua'>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col ">
+            <div className=" min-h-screen w-full bg-base-200">
+                <div className="hero-content w-full flex-col ">
                     <h1 className='text-3xl font-bold'>Please login</h1>
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -74,8 +74,8 @@ const LoginLayOut = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </Form>
-                        <button onClick={googleLogin} className="btn glass text-white">Login With Google</button>
-                        <button onClick={githubLogin} className="btn glass text-white">LOgin With Github</button>
+                        <button   onClick={googleLogin} className="btn glass text-white">Login With Google</button>
+                        <button onClick={githubLogin} className="btn glass text-white my-5">LOgin With Github</button>
                     </div>
                 </div>
             </div>

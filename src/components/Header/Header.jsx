@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 
 const Header = () => {
-    const { logout, user } = useContext(AuthContext);
+    const { logout, user ,auth} = useContext(AuthContext);
 
-
+    
+    
     const handleLogout = () => {
         logout()
             .then(() => {
@@ -34,7 +35,7 @@ const Header = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src= {''}/>
+                                <img src= {auth?.currentUser?.photoUR}/>
                             </div>
                         </label>
                     </div>

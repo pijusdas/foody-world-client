@@ -13,6 +13,7 @@ const GithubProvider = new  GithubAuthProvider()
 const Authprovider = ({children}) => {
     const [user,setUser] = useState(null)
 
+    console.log(auth?.currentUser?.photoURL)
 
     const creatUser = (email,password)=>{
         return createUserWithEmailAndPassword(auth,email,password)
