@@ -12,7 +12,7 @@ const ChefsDetails = () => {
     }, [])
     return (
         <div  data-theme='corporate' className=' py-28'>
-            <h1 className=' text-center  text-3xl font-bold'>Meet Our Special Chef's</h1>
+            <h1 className=' text-center  text-5xl font-bold mb-12'>Meet Our Special Chef's</h1>
             <div className='px-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     chefsData.map(chef => <ChefsCard key={chef.id}

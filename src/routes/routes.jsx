@@ -3,6 +3,7 @@ import Main from "../components/Layout/Main";
 import Home from "../components/Pages/Home/Home/Home";
 import LoginLayOut from "../components/LoginLayout/LoginLayOut";
 import Registration from "../components/LoginLayout/Registration";
+import ViewRecipes from "../components/Pages/Home/ViewRecipes/ViewRecipes";
 
  
 
@@ -21,6 +22,11 @@ import Registration from "../components/LoginLayout/Registration";
             {
                 path: '/register',
                 element: <Registration></Registration>
+            },
+            {
+                path:'recipes/:id',
+                element: <ViewRecipes></ViewRecipes>,
+                 
             }
         ]
     }

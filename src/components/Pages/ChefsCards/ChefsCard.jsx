@@ -1,15 +1,21 @@
 import React from 'react';
+import { FaHeart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ChefsCard = ({ chef }) => {
-    const { name, photo, yearsOfExperience, numberOfRecipes, likes } = chef
+    const {id, name, photo, yearsOfExperience, recipesItems, likes } = chef
     return (
         <div className="card card-compact w-full bg-base-100  shadow-2xl">
-            <figure><img className=' min-h-full' src= {photo} alt="Shoes" /></figure>
-            <div className="card-body">
+            <figure><img className=' h-96 w-full' src= {photo} alt="Shoes" /></figure>
+            <div className='p-10'>
                 <h2 className="card-title "> {name}</h2>
-                <p> Exeriences: {yearsOfExperience} </p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                <p className='text-lg mb-0'> Exeriences: {yearsOfExperience} years </p>
+                <p className=' text-lg'> Recipes Items: {recipesItems}</p>
+                <div className="card-actions mt-5  flex justify-between items-center">
+                    <p className='flex items-center'> <FaHeart className=' text-red-600'></FaHeart>  {likes}</p>
+                    <Link to={`/recipes/${id}`}>
+                    <button className="btn btn-primary rounded">View Recipes</button>
+                    </Link>
                 </div>
             </div>
         </div>
