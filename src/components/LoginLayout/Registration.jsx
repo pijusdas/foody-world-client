@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 
@@ -12,6 +12,8 @@ const Registration = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
+
+       
 
         creatUser(email,password)
         .then(result =>{
