@@ -11,7 +11,7 @@ const Banner = () => {
             backgroundRepeat: "no-repeat",
 
         }}  >
-            <div className='flex justify-end pr-5 pt-36'>
+            <div className='flex sm:mb-0 justify-end pr-5 pt-36'>
                 <h1 className='font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-800 to-pink-600'>Delicious <br /> Food Is <br /> My Passion</h1>
               
             </div>
