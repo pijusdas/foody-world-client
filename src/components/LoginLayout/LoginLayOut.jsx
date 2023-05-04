@@ -1,14 +1,21 @@
 import React, { useContext, useState } from 'react';
-import { Form } from 'react-router-dom';
+import { Form, Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 
 const LoginLayOut = () => {
     const { loginWithGoogle, loginWithGithub, login } = useContext(AuthContext)
     const [error, setError] = useState('');
 
+    const navigate = useNavigate()
+
+    const location =useLocation()
+    console.log(location)
+    const from = location.state?.from?.pathname || '/'
+
 
     const handleLogin = (event) => {
         event.preventDefault()
+        setError('')
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value
@@ -23,6 +30,7 @@ const LoginLayOut = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                navigate(from)
             })
             .catch(error => {
                 console.log(error)
@@ -36,6 +44,7 @@ const LoginLayOut = () => {
             .then(result => {
                 const loggedUser = result.user
                 console.log(loggedUser)
+                navigate(from)
             })
             .catch(error => {
                 console.log(error.message)
@@ -48,6 +57,7 @@ const LoginLayOut = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                navigate(from)
             })
             .catch(error => {
                 console.log(error)
@@ -82,6 +92,7 @@ const LoginLayOut = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
+                            <p className=' mt-5 text-white'><small>New To Foody World? <Link className=' bg-red-500 rounded p-1' to='/register'>Please Register</Link></small></p>
                             <p className=' bg-white'><small className=' text-red-600 font-bold'>{error}</small></p>
 
                         </Form>

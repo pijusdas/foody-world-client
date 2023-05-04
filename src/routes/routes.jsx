@@ -4,6 +4,8 @@ import Home from "../components/Pages/Home/Home/Home";
 import LoginLayOut from "../components/LoginLayout/LoginLayOut";
 import Registration from "../components/LoginLayout/Registration";
 import ViewRecipes from "../components/Pages/Home/ViewRecipes/ViewRecipes";
+import PrivateRoute from "./PrivateRoutes";
+import Blogs from "../components/Pages/Home/Blogs/Blogs";
 
  
 
@@ -25,8 +27,12 @@ import ViewRecipes from "../components/Pages/Home/ViewRecipes/ViewRecipes";
             },
             {
                 path:'recipes/:id',
-                element: <ViewRecipes></ViewRecipes>,
+                element:<PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
                  
+            },
+            {
+                path:'blogs',
+                element:<Blogs></Blogs>
             }
         ]
     }
