@@ -6,6 +6,7 @@ import Registration from "../components/LoginLayout/Registration";
 import ViewRecipes from "../components/Pages/Home/ViewRecipes/ViewRecipes";
 import PrivateRoute from "./PrivateRoutes";
 import Blogs from "../components/Pages/Home/Blogs/Blogs";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
  
 
@@ -13,6 +14,7 @@ import Blogs from "../components/Pages/Home/Blogs/Blogs";
     {
         path:'/',
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path:'/',

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 import { Tooltip } from '@mui/material';
 
@@ -22,9 +22,9 @@ const Header = () => {
                     <a className="btn btn-ghost normal-case text-xl font-extrabold"> FOODY WORLD</a>
                 </div>
                 <div className=' gap-5'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/blogs'>Blogs</Link>
-                    <Link to='/about'>About Us</Link>
+                    <NavLink to='/' className={({isActive}) => isActive? 'text-blue-900 font-bold': ' text-white'} > Home </NavLink>
+                    <NavLink to='/blogs'  className={({isActive}) => isActive? 'text-blue-900 font-bold': ' text-white'} >Blogs</NavLink>
+                    <NavLink to='/about'  className={({isActive}) => isActive? 'text-blue-900 font-bold': ' text-white'} >About Us</NavLink>
 
                 </div>
                 <div className="flex-none gap-2">

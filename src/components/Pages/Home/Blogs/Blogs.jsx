@@ -1,15 +1,9 @@
 import React from 'react';
-import ReactToPdf from "react-to-pdf";
 
 const Blogs = () => {
-    const ref = React.createRef();
     return (
         <div className='my-20'>
-            <ReactToPdf targetRef={ref} filename="div-blue.pdf">
-                {({ toPdf }) => (
-                    <button onClick={toPdf}>Generate pdf</button>
-                )}
-            </ReactToPdf>
+             
             <div className=' bg-sky-300 w-[70%] mx-auto p-10 rounded-lg shadow-2xl mb-8'>
                 <h1 className=' text-xl font-bold mb-5'>Tell us the differences between uncontrolled and controlled components ?</h1>
                 <p className=' mb-3'><b>Controlled</b>: A controlled functional component is a component that receives its current value and update callback via props. For example, consider a simple form that accepts an email address and a password:

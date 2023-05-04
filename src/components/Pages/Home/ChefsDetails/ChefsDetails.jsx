@@ -6,7 +6,7 @@ const ChefsDetails = () => {
     console.log(chefsData)
 
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://foody-world-server.vercel.app/')
             .then(res => res.json())
             .then(data => setChefsData(data))
     }, [])

@@ -14,7 +14,7 @@ const ViewRecipes = () => {
     console.log(numberOfRecipes)
 
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://foody-world-server.vercel.app/')
             .then(res => res.json())
             .then(data => {
                 const singledata = data.find(d => d.id == singleId.id)
