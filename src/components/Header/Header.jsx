@@ -17,9 +17,9 @@ const Header = () => {
     }
     return (
         <div  >
-            <div className="navbar bg-blue-400 flex justify-between">
+            <div className="navbar bg-blue-400 lg:flex justify-between">
                 <div className="">
-                    <a className="btn btn-ghost normal-case text-xl font-extrabold"> FOODY WORLD</a>
+                    <a className="btn btn-ghost normal-case text-3xl font-extrabold text-sky-950 "> FOODY WORLD</a>
                 </div>
                 <div className=' gap-5'>
                     <NavLink to='/' className={({isActive}) => isActive? 'text-blue-900 font-bold': ' text-white'} > Home </NavLink>
