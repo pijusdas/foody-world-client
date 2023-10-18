@@ -6,6 +6,7 @@ import Menu from '../Menu/Menu';
 import NavBar from '../../../Layout/Navbar/NavBar';
 import WhyChoseUs from './WhyChoseUs/WhyChoseUs';
 import AboutUs2 from '../AboutUs2/AboutUs2';
+import ContackUs from '../ContactUs/ContackUs';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <Menu></Menu>
             <AboutUs2/>
+            <ContackUs/>
 
         </div>
     );
