@@ -7,6 +7,7 @@ import ViewRecipes from "../components/Pages/Home/ViewRecipes/ViewRecipes";
 import PrivateRoute from "./PrivateRoutes";
 import Blogs from "../components/Pages/Home/Blogs/Blogs";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import AbouUs3 from "../components/Pages/Home/AboutUs3/AbouUs3";
 
  
 
@@ -35,6 +36,10 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
             {
                 path:'blogs',
                 element:<Blogs></Blogs>
+            },
+            {
+                path: 'aboutUs',
+                element: <AbouUs3/>
             }
         ]
     }
