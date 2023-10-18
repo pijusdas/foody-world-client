@@ -16,7 +16,8 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div  >
+        <div >
+            
             <div className="navbar bg-blue-400 lg:flex justify-between">
                 <div className="">
                     <a className="btn btn-ghost normal-case text-3xl font-extrabold text-sky-950 "> FOODY WORLD</a>
