@@ -11,7 +11,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <button className=' border px-5 py-2 hover:translate-x-1 transition-colors hover:bg-sky-400 hover:text-white border-sky-400 font-bold text-sky-400'>Get In Touch</button>
+            <button className=' px-5 py-2 hover:translate-x-1 rounded-2xl hover:bg-sky-400 hover:text-white border-e-2 border-s-2 border-sky-400 font-bold text-sky-400'>Get In Touch</button>
         </div>
     );
 };
